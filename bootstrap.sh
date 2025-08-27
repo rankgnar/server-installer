@@ -273,7 +273,7 @@ if [ -e "ServerInstaller.sh" ]; then
 fi
 
 # Download the main script
-curl -sSL https://raw.githubusercontent.com/rankgnar/server-installer/main/ServerInstaller.sh -o ServerInstaller.sh
+curl -sSL https://raw.githubusercontent.com/rankgnar/server-installer/master/ServerInstaller.sh -o ServerInstaller.sh
 if [ $? -eq 0 ]; then
     echo "14/14 - [ OK ] - Downloading main script"
     # Execute the downloaded script
