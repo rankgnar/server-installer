@@ -36,7 +36,7 @@ To make the installation of tools as easy as possible, we created a short comman
 Just run this command in your server terminal:
 
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/rankgnar/server-installer/main/bootstrap.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/rankgnar/server-installer/master/bootstrap.sh)
 ```
 
 After that, just wait a few moments while the script starts and finally install the tools you want.
@@ -51,8 +51,9 @@ After that, just wait a few moments while the script starts and finally install 
 </p>
 
 ### Current Status:
+
 - ✅ **Traefik & Portainer** - Fully functional reverse proxy and Docker management
-- ✅ **MinIO** - Fully functional S3-compatible object storage  
+- ✅ **MinIO** - Fully functional S3-compatible object storage
 - ⏳ **N8N** - Coming soon (workflow automation)
 - ⏳ **Qdrant** - Coming soon (vector database)
 - ✅ **Supabase** - Fully functional backend-as-a-service with PostgreSQL, Auth, and REST API
@@ -63,22 +64,27 @@ After that, just wait a few moments while the script starts and finally install 
 ## 🚀 What does it install?
 
 ### Core Infrastructure (Required First)
+
 **Traefik**: Reverse proxy with automatic SSL certificates and HTTP→HTTPS redirects  
 **Portainer**: Docker container management with web UI and agent for cluster management
 
 ### Object Storage
+
 **MinIO**: Production-ready S3-compatible object storage with web console and API endpoints
 
-### Backend as a Service  
+### Backend as a Service
+
 **Supabase**: Complete Firebase alternative including:
+
 - PostgreSQL database with extensions
 - Authentication service (GoTrue)
-- REST API (PostgREST) 
+- REST API (PostgREST)
 - Real-time subscriptions
 - Dashboard and database management
 - JWT token generation and management
 
 ### Coming Soon
+
 **N8N**: Workflow automation platform with visual editor  
 **Qdrant**: High-performance vector database for AI applications
 
@@ -87,17 +93,19 @@ After that, just wait a few moments while the script starts and finally install 
 ## 📖 Usage
 
 1. Run the bootstrap command above
-2. Accept the license agreement  
+2. Accept the license agreement
 3. Choose applications from the menu:
+
    - **01** - Install Traefik & Portainer (⚠️ **install this first - required for all other apps**)
    - **02** - Install MinIO (requires 2 subdomains: console + S3 API)
    - **03** - Install N8N (coming soon)
-   - **04** - Install Qdrant (coming soon)  
+   - **04** - Install Qdrant (coming soon)
    - **05** - Install Supabase (⚠️ **requires MinIO to be installed first**)
    - **06-25** - More tools coming soon
    - **99** - Exit installer
 
 4. Each application will ask for:
+
    - Domain names (subdomains pointing to your server)
    - Username and password
    - Additional configuration as needed
@@ -133,6 +141,7 @@ After that, just wait a few moments while the script starts and finally install 
 ## 🤝 Contributing
 
 We welcome contributions! Feel free to:
+
 - Report bugs
 - Suggest new applications
 - Submit pull requests
@@ -149,12 +158,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🐛 Troubleshooting
 
 ### Common Issues:
+
 - **404 Error**: Make sure your subdomains are pointing to your server IP
 - **SSL Certificate Issues**: Wait 5-10 minutes for Let's Encrypt certificates to be generated
 - **Service Not Starting**: Check `docker service ls` to see service status
 - **Supabase Requires MinIO**: Install MinIO (option 02) before installing Supabase (option 05)
 
 ### Useful Commands:
+
 ```bash
 # Check running services
 docker service ls
