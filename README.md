@@ -191,5 +191,5 @@ This installer is provided "as is" without warranty. Always backup your data bef
 <p align="center">
   <b>Made with ❤️ by RankGnar</b><br>
   <a href="https://github.com/rankgnar">GitHub</a> • 
-  <a href="https://https://rankgnar.online/">Website</a>
+  <a href="https://https://rankgnar.online">Website</a>
 </p>
